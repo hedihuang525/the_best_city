@@ -1,0 +1,218 @@
+/*
+  If you get stuck, feel free to watch the follow-up videos where I'll show you one solution
+*/
+
+/* =================================
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.main-nav {
+	margin-top: 5px;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	/*使.name和.main-nav li垂直置中*/
+	padding: 10px 15px;
+}
+
+.name,
+.main-nav li {
+  text-align: center;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #3acec2;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+.container{
+  width: 100%;
+  margin: 0 auto;
+	padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.primary {
+	margin: 0 auto;
+}
+
+
+.main-header {
+	padding: .5em 0;
+	z-index: 1;
+}
+
+.banner {
+	color: #fff;
+	background: #3acec2;
+  text-align: center;
+  padding: 3.2em 0;
+	margin-bottom: 60px;
+}
+
+.main-footer {
+	background: #d9e4ea;
+	padding: 2em 0;
+	margin-top: 30px;
+  text-align: center;
+}
+
+.col {
+	/*單位用em 圖片才會和文字對齊!*/
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 190px;
+}
+
+.headline {
+	margin: 0;
+}
+
+.tagline {
+	font-size: 1.2em;
+}
+
+.feat-img-div {
+	/*作為gunter的地圖*/
+	position: relative;
+}
+
+.gunter {
+	/*控制width來調整gunter整體大小*/
+	width: 40px;
+	/*把gunter放在feat-img-div的中間*/
+	position: absolute;
+	top: 35%;
+	left: 44%;
+}
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+	.container {
+		width: 90%;
+	}
+
+	.name,
+	.main-nav li{
+		display: inline-block;
+	}
+
+	.name {
+		float: left;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.col {
+		float: left;
+	}
+
+	.secondary,
+	.primary {
+		width: 50%;
+	}
+
+	.banner {
+
+	}
+
+	.main-header {
+		box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+		position: fixed;
+		background-color: rgb(255, 255, 255);
+		width: 100%;
+		top: 0;
+	}
+
+	body {
+		padding-top: 68px;
+	}
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+@media (min-width: 1025px) {
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+
+	.secondary,
+	.tertiary {
+		width: 30%;
+	}
+
+	.primary {
+		width: 40%;
+	}
+}
+
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
